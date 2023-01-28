@@ -1,0 +1,21 @@
+body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.background-image{
+  width: 40vw;
+  background-image:url("./background.jpg");
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+.content-wrapper{
+  display: flex;
+  width: 60vw;
+  background: #16213E;
+}
