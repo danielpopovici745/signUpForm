@@ -14,6 +14,32 @@ body{
   background-repeat: no-repeat;
 }
 
+.title-wrapper{
+  display: flex;
+  width: auto;
+  height: 100%;
+}
+
+.title{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: fit-content;
+  background: rgba(0, 0, 0,0.3);
+  margin-top: 20vh;
+  gap: 10px;
+}
+
+.logo{
+  width: 65px;
+}
+
+.title > span{
+  display: flex;
+  color: rgba(220, 220, 220);
+  font-size: 5rem;
+}
+
 .content-wrapper{
   display: flex;
   width: 60vw;
