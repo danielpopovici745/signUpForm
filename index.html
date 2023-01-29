@@ -28,17 +28,18 @@
           <div class="row">
             <div>
               <label for="firstname">First Name<span aria-label="required">*</span></label>
-              <input type="text" name="firstname" id="firstname">
+              <input type="text" name="firstname" id="firstname" required>
             </div>
             <div>
               <label for="lastname">Last Name<span aria-label="required">*</span></label>
-              <input type="text" name="lastname" id="lastname">
+              <input type="text" name="lastname" id="lastname" required>
             </div>
           </div>
           
           <div class="row">
             <div>
-              <label for="email">Email<span aria-label="required">*</span></label>
+              <label for="email">Email<span aria-label="required">*</span>
+              </label>
               <input type="email" name="email" id="email">
             </div>
     
@@ -51,18 +52,19 @@
           <div class="row">
             <div>
               <label for="password">Password</label>
-              <input type="text" name="password" id="password">
+              <input type="text" name="password" id="password" required        
+              aria-label="required">
             </div>
             <div>
               <label for="confirmpassword">Confirm Password</label>
-              <input type="text" name="confirmpassword" id="confirmpassword">
+              <input type="text" name="confirmpassword" id="confirmpassword" required aria-label="required">
             </div>
           </div>
           </div>
         </div>
         
         <button type="submit">Create Account</button>
-        <span>Already have an account? <a href="./index.html">Log in</a> </span>
+        <span>Already have an account? <a href="./index.html">Log in</a></span>
       </form>
     </div>
     </div>
