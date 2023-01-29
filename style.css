@@ -6,6 +6,23 @@ body{
   height: 100vh;
 }
 
+span,label{
+  color: rgba(220, 220, 220);
+}
+input{
+  border: none;
+  font-size: 1.2rem;
+  height: 40px;
+  width: 300px;
+  appearance: none;
+}
+
+input{
+  background-color: rgba(220, 220, 220);
+}
+
+/* Left of page, image with title*/
+
 .background-image{
   width: 40vw;
   background-image:url("./background.jpg");
@@ -25,7 +42,7 @@ body{
   width: 100%;
   justify-content: center;
   height: fit-content;
-  background: rgba(0, 0, 0,0.3);
+  background: rgba(0, 0, 0,0.4);
   margin-top: 20vh;
   gap: 10px;
 }
@@ -35,13 +52,77 @@ body{
 }
 
 .title > span{
-  display: flex;
-  color: rgba(220, 220, 220);
-  font-size: 5rem;
+  font-size: 7rem;
 }
+
+/* Right side, form and header */
 
 .content-wrapper{
   display: flex;
   width: 60vw;
   background: #191A19;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  height: 100%;
+  padding-left: 40px;
+  max-width: 800px;
+}
+
+.formheader{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+  height: 20vh;
+  gap: 20px;
+  font-size: 1.4rem;
+  justify-content: center;
+  align-items: left;
+}
+
+.signup{
+  display: flex;
+}
+
+.formwrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+}
+
+.row{
+  display: flex;
+  gap: 200px;
+}
+
+.row > * {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 30px;
+}
+
+label{
+  font-size: 1.8rem;
+}
+
+button[type="submit"]{
+  font-size: 1.1rem;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(78, 159, 61);
+  width: 150px;
 }
