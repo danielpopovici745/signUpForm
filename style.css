@@ -97,7 +97,8 @@ body{
 
 .row > * {
   display: flex;
-  gap: 6px;
+  width: 250px;
+  gap: 8px;
   flex-direction: column;
 }
 
@@ -117,6 +118,12 @@ label{
 span,label{
   color: rgba(200, 200, 200);
 }
+
+.error-msg{
+  display: flex;
+  gap: 4px;
+}
+
 input{
   appearance: none;
   border: 0px;
