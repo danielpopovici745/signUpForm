@@ -1,26 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Paprika&family=Roboto+Slab&display=swap');
+
 body{
   margin: 0;
   padding: 0;
   display: flex;
   width: 100vw;
   height: 100vh;
+  font-family: "Roboto Slab", sans-serif;
 }
-
-span,label{
-  color: rgba(220, 220, 220);
-}
-input{
-  border: none;
-  font-size: 1rem;
-  height: 30px;
-  width: 200px;
-  appearance: none;
-}
-
-input{
-  background-color: rgba(220, 220, 220);
-}
-
 /* Left of page, image with title*/
 
 .background-image{
@@ -52,6 +39,7 @@ input{
 }
 
 .title > span{
+  font-family: 'Paprika',sans-serif;
   font-size: 5rem;
 }
 
@@ -60,31 +48,38 @@ input{
 .content-wrapper{
   display: flex;
   width: 60vw;
-  background: #191A19;
+  background: rgb(25, 26, 25);
 }
 
 .content{
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 40px;
   width: 100%;
   height: 100%;
-  padding-left: 40px;
-  max-width: 800px;
 }
 
 .form-header{
   display: flex;
   flex-direction: column;
-  margin-top: 10vh;
-  height: 15vh;
+  height: fit-content;
+  width: 625px;
   font-size: 1.4rem;
   justify-content: center;
   align-items: left;
 }
 
+.form-header,form{
+  padding: 0px 0px 0px 40px;
+}
+
+
 .signup{
   display: flex;
+  background-color: rgb(40, 40, 40);
+  padding: 20px 0px 20px 0px;
+  box-shadow: 5px 5px 10px 0px black;
 }
 
 .form-wrapper{
@@ -102,6 +97,7 @@ input{
 
 .row > * {
   display: flex;
+  gap: 6px;
   flex-direction: column;
 }
 
@@ -110,23 +106,65 @@ form{
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 50px;
+  gap: 30px;
+  padding-left: 40px;
 }
 
 label{
   font-size: 1.4rem;
 }
 
+span,label{
+  color: rgba(200, 200, 200);
+}
+input{
+  appearance: none;
+  border: 0px;
+  outline: 2px solid gray;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 1rem;
+  height: 30px;
+  width: 200px;
+  background-color: rgba(200, 200, 200);
+}
+
+input:focus{
+  outline: 3px solid rgb(150, 114, 72);
+  box-shadow: 0px 7px 10px 4px rgb(0, 0, 0);
+}
+
 button[type="submit"]{
   font-size: 1.1rem;
   padding: 10px;
+  border: none;
   border-radius: 5px;
-  background-color: rgb(78, 159, 61);
+  background-color: rgb(150, 114, 72);
   width: 150px;
+}
+
+button[type="submit"]:hover{
+  background-color: rgba(150, 114, 72,0.8);
+}
+button[type="submit"]:active{
+  background-color: rgba(150, 114, 72,0.7);
 }
 
 .create-account{
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 10px;
+}
+
+.create-account > span{
+  font-size: 1.1rem;
+}
+
+a{
+  text-decoration: none;
+  color: rgb(150, 114, 72);
+}
+
+a:active{
+  color: rgba(150, 114, 72,0.7);
 }
