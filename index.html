@@ -62,10 +62,16 @@
             <div>
               <label for="password">Password<span aria-label="required">*</span></label></label>
               <input type="password" name="password" id="password" placeholder="Password" required>
+              <div class="error-msg">
+                <span class="password-error"></span>
+              </div>
             </div>
             <div>
               <label for="confirmpassword">Confirm Password<span aria-label="required">*</span></label></label>
-              <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password" required aria-label="required">
+              <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm Password" disabled required aria-label="required">
+              <div class="error-msg">
+                <span class="confirmpassword-error"></span>
+              </div>
             </div>
           </div>
         </div>
