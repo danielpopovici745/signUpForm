@@ -32,9 +32,11 @@ function checkValidity(inputType){
     case "email":
       if (email.validity.valid){
         emailError.textContent = "";
-        if(warningImg != null)
-        emailMsg.removeChild(emailMsg.firstElementChild);
-        emailErrorCount -= 1;
+        if(emailErrorCount == 1){
+          emailMsg.removeChild(emailMsg.firstElementChild);
+          emailErrorCount -= 1;
+        } 
+        
         break;
       }
       else{
@@ -44,8 +46,10 @@ function checkValidity(inputType){
     case "firstname":
       if(firstName.validity.valid){
         firstNameError.textContent = "";
-        firstNameMsg.removeChild(firstNameMsg.firstElementChild);
-        firstNameErrorCount -= 1
+        if(firstNameErrorCount == 1){
+          firstNameMsg.removeChild(firstNameMsg.firstElementChild);
+          firstNameErrorCount -= 1
+        }
         break;
       }
       else{
@@ -55,8 +59,11 @@ function checkValidity(inputType){
     case "lastname":
       if(lastName.validity.valid){
         lastNameError.textContent = "";
-        lastNameMsg.removeChild(lastNameMsg.firstElementChild);
-        lastNameErrorCount -= 1;
+        if (lastNameErrorCount == 1) {
+          lastNameMsg.removeChild(lastNameMsg.firstElementChild);
+          lastNameErrorCount -= 1;
+        }
+        
         break;
       }
       else{
