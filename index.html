@@ -29,10 +29,16 @@
             <div>
               <label for="firstname">First Name<span aria-label="required">*</span></label>
               <input type="text" name="firstname" id="firstname" placeholder="Joe" required>
+              <div class="error-msg">
+                <span class="firstname-error"></span>
+              </div>
             </div>
             <div>
               <label for="lastname">Last Name<span aria-label="required">*</span></label>
               <input type="text" name="lastname" id="lastname" placeholder="Smith" required>
+              <div class="error-msg">
+                <span class="lastname-error"></span>
+              </div>
             </div>
           </div>
           
@@ -44,12 +50,11 @@
               <div class="error-msg">
                 <span class="email-error"></span>
               </div>
-              
             </div>
     
             <div>
               <label for="cell">Phone Number</label>
-              <input type="tel" name="cell" id="cell">
+              <input type="number" name="cell" id="cell">
             </div>
           </div>
 
