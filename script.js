@@ -46,6 +46,35 @@ inputs.forEach(input => {
 
 function checkValidity(inputType){
   switch (inputType){
+    
+    case "firstname":
+      if(firstName.validity.valid){
+        firstNameError.textContent = "";
+        firstName.style.outline = `2px solid ${correctColor}`
+        if(firstNameErrorCount == 1){
+          firstNameMsg.removeChild(firstNameMsg.firstElementChild);
+          firstNameErrorCount -= 1
+        }
+      }
+      else{
+        throwFirstNameError();
+      }
+      break;
+
+    case "lastname":
+      if(lastName.validity.valid){
+        lastNameError.textContent = "";
+        lastName.style.outline = `2px solid ${correctColor}`
+        if (lastNameErrorCount == 1) {
+          lastNameMsg.removeChild(lastNameMsg.firstElementChild);
+          lastNameErrorCount -= 1;
+        }
+      }
+      else{
+        throwLastNameError();
+      }
+      break;
+
     case "email":
       if (email.validity.valid){
         emailError.textContent = "";
@@ -58,33 +87,11 @@ function checkValidity(inputType){
         throwEmailError(emailErrorCount);
       }
       break;
-    case "firstname":
-      if(firstName.validity.valid){
-        firstNameError.textContent = "";
-        if(firstNameErrorCount == 1){
-          firstNameMsg.removeChild(firstNameMsg.firstElementChild);
-          firstNameErrorCount -= 1
-        }
-      }
-      else{
-        throwFirstNameError();
-      }
-      break;
-    case "lastname":
-      if(lastName.validity.valid){
-        lastNameError.textContent = "";
-        if (lastNameErrorCount == 1) {
-          lastNameMsg.removeChild(lastNameMsg.firstElementChild);
-          lastNameErrorCount -= 1;
-        }
-      }
-      else{
-        throwLastNameError();
-      }
-      break;
+
     case "password":
       checkPassword();
       break;
+
     case "confirmpassword":
       checkConfirmPassword();
       break;
@@ -185,6 +192,8 @@ function checkConfirmPassword(){
   }
   else{
     removeConfirmPasswordErrorMsg();
+    password.style.outline = `2px solid ${correctColor}`;
+    confirmpassword.style.outline = `2px solid ${correctColor}`;
   }
 }
 
