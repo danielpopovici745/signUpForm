@@ -54,7 +54,10 @@
     
             <div>
               <label for="cell">Phone Number</label>
-              <input type="number" name="cell" id="cell">
+              <input type="tel" name="cell" id="cell" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+              <div class="error-msg">
+                <span class="cell-error"></span>
+              </div>
             </div>
           </div>
 
