@@ -185,7 +185,6 @@ function throwCellError(){
 
 function checkPassword(){
   if(password.value == ""){
-    confirmPassword.disabled = true;
     confirmPassword.style.removeProperty("outline");
     addPasswordErrorMsg();
     passwordError.textContent = "Enter Password";
@@ -193,26 +192,18 @@ function checkPassword(){
       removeConfirmPasswordErrorMsg(); 
     }
   }
-  // else if(password.value == "" && confirmpassword.value == ""){
-  //   addPasswordErrorMsg();
-  //   passwordError.textContent="Enter Password";
-  //   confirmPassword.disabled = true;
-  //   removeConfirmPasswordErrorMsg();
-  // }
   else if(password.value != confirmPassword.value && (confirmPassword.value != "") && (password.value != "")){
     removePasswordErrorMsg();
-    confirmPassword.disabled =false;
     checkConfirmPassword();
   }
   else if (password.value == confirmPassword.value){
-    password.style.outline = `2px solid ${correctColor}`;
-    confirmpassword.style.outline = `2px solid ${correctColor}`;
     removePasswordErrorMsg();
     removeConfirmPasswordErrorMsg();
+    password.style.outline = `2px solid ${correctColor}`;
+    confirmpassword.style.outline = `2px solid ${correctColor}`;
   }
   else{
     removePasswordErrorMsg();
-    confirmPassword.disabled = false;
   }
 }
 
@@ -240,14 +231,17 @@ function checkConfirmPassword(){
     addConfirmPasswordErrorMsg();
     confirmPasswordError.textContent = "Confirm Password";
   }
-  else if (confirmpassword.value != password.value){
+  else if (password.value == ""){
+    checkPassword();
+  }
+  else if (confirmpassword.value != password.value ){
     password.style.removeProperty("outline");
     addConfirmPasswordErrorMsg();
     confirmPasswordError.textContent = "Passwords don't match";
   }
   else{
     removeConfirmPasswordErrorMsg();
-    if (passwordErrorCount != 1) {
+    if (passwordErrorCount != 1 && password.value != "") {
       password.style.outline = `2px solid ${correctColor}`;
       confirmpassword.style.outline = `2px solid ${correctColor}`;
     }
