@@ -107,7 +107,7 @@ form{
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 30px;
+  gap: 14px;
   padding-left: 40px;
 }
 
