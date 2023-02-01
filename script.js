@@ -185,19 +185,30 @@ function throwCellError(){
 
 function checkPassword(){
   if(password.value == ""){
+    confirmPassword.disabled = true;
+    confirmPassword.style.removeProperty("outline");
     addPasswordErrorMsg();
     passwordError.textContent = "Enter Password";
+    if (confirmPasswordErrorCount ==1) {
+      removeConfirmPasswordErrorMsg(); 
+    }
   }
-  else if(password.value == "" && confirmpassword.value == ""){
-    addPasswordErrorMsg();
-    passwordError.textContent="Enter Password";
-    confirmPassword.disabled = true;
-    removeConfirmPasswordErrorMsg();
-  }
+  // else if(password.value == "" && confirmpassword.value == ""){
+  //   addPasswordErrorMsg();
+  //   passwordError.textContent="Enter Password";
+  //   confirmPassword.disabled = true;
+  //   removeConfirmPasswordErrorMsg();
+  // }
   else if(password.value != confirmPassword.value && (confirmPassword.value != "") && (password.value != "")){
     removePasswordErrorMsg();
-    addConfirmPasswordErrorMsg();
-    confirmPasswordError.textContent = "Passwords don't match";
+    confirmPassword.disabled =false;
+    checkConfirmPassword();
+  }
+  else if (password.value == confirmPassword.value){
+    password.style.outline = `2px solid ${correctColor}`;
+    confirmpassword.style.outline = `2px solid ${correctColor}`;
+    removePasswordErrorMsg();
+    removeConfirmPasswordErrorMsg();
   }
   else{
     removePasswordErrorMsg();
@@ -225,17 +236,21 @@ function removePasswordErrorMsg(){
 
 function checkConfirmPassword(){
   if(confirmpassword.value == "" && password.value != ""){
+    password.style.removeProperty("outline");
     addConfirmPasswordErrorMsg();
     confirmPasswordError.textContent = "Confirm Password";
   }
   else if (confirmpassword.value != password.value){
+    password.style.removeProperty("outline");
     addConfirmPasswordErrorMsg();
     confirmPasswordError.textContent = "Passwords don't match";
   }
   else{
     removeConfirmPasswordErrorMsg();
-    password.style.outline = `2px solid ${correctColor}`;
-    confirmpassword.style.outline = `2px solid ${correctColor}`;
+    if (passwordErrorCount != 1) {
+      password.style.outline = `2px solid ${correctColor}`;
+      confirmpassword.style.outline = `2px solid ${correctColor}`;
+    }
   }
 }
 
