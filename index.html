@@ -44,19 +44,18 @@
           
           <div class="row">
             <div>
+              <label for="cell">Phone Number</label>
+              <input type="tel" name="cell" id="cell" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="123-456-7890">
+              <div class="error-msg">
+                <span class="cell-error"></span>
+              </div>
+            </div>
+            <div>
               <label for="email">Email<span aria-label="required">*</span>
               </label>
               <input type="email" name="email" id="email" placeholder="email@email.com" required>
               <div class="error-msg">
                 <span class="email-error"></span>
-              </div>
-            </div>
-    
-            <div>
-              <label for="cell">Phone Number</label>
-              <input type="tel" name="cell" id="cell" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="123-456-7890">
-              <div class="error-msg">
-                <span class="cell-error"></span>
               </div>
             </div>
           </div>
