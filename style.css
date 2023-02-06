@@ -7,6 +7,7 @@ body{
   width: 100vw;
   height: 100vh;
   font-family: "Roboto Slab", sans-serif;
+  overflow-x: hidden;
 }
 /* Left of page, image with title*/
 
@@ -64,19 +65,16 @@ body{
   display: flex;
   flex-direction: column;
   height: fit-content;
-  width: 625px;
+  padding: 0px 10px 0px 40px;
+  max-width: 625px;
   font-size: 1.4rem;
   justify-content: center;
   align-items: left;
 }
 
-.form-header,form{
-  padding: 0px 0px 0px 40px;
-}
-
-
 .signup{
   display: flex;
+  width: 100%;
   background-color: rgb(40, 40, 40);
   padding: 20px 0px 20px 0px;
   box-shadow: 5px 5px 10px 0px black;
@@ -174,4 +172,112 @@ a{
 
 a:active{
   color: rgba(150, 114, 72,0.7);
+}
+
+@media screen and (max-width: 1234px){
+  .row{
+    gap: 50px;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .row{
+    gap: 0px;
+  }
+}
+
+@media screen and (max-width: 875px){
+  body{
+    flex-direction: column;
+  }
+  .background-image,.content-wrapper{
+    width: 100vw;
+  }
+  .background-image{
+    height: 30vh;
+  }
+  .title-wrapper,.content{
+    align-items: center;
+  }
+  .title{
+    margin-top: 0;
+  }
+
+  .form-header{
+    padding: 0;
+  }
+
+  .content-wrapper{
+    height: 70vh;
+  }
+
+  .content{
+    gap: 0;
+    justify-content: start;
+  }
+
+  .form-header{
+    padding: 20px 10px 20px 10px;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  form,.form-wrapper{
+    align-items: center;
+  }
+
+  form{
+    padding: 0px;
+    gap: 30px;
+  }
+
+  .row{
+    gap: 50px;
+  }
+
+  .row > *{
+    width: fit-content;
+  }
+
+
+
+  .create-account{
+    align-items: center;
+  }
+}
+
+@media screen and (max-width:540px){
+
+  .form-header{
+    padding: 20px 20px 20px 20px;
+  }
+  .row{
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .row > *{
+    width: fit-content;
+  }
+}
+
+@media screen and (max-width:445px){
+  .title > span{
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width:325px){
+
+  .title{
+    align-items: center;
+  }
+  .title > span{
+    font-size: 3rem;
+  }
+  .logo{
+    width: 40px;
+  }
 }
